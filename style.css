@@ -1,0 +1,269 @@
+.menu-icon
+{
+    transition: .5s;
+    width: 24px;
+    height: 24px;
+    fill: rgb(96, 96, 96);
+    cursor: pointer;
+}
+
+.menu-icon:hover{
+    transition: .5s;
+    fill: rgb(13, 13, 13);
+    width: 28px;
+    height: 28px;
+}
+.btn-menu {
+    border: none;
+    padding: 0;
+    background: none;
+}
+:root
+{
+    --header-height: 40px;
+    --accent-color: rgb(204, 0, 0);
+    --lightest-gray: rgb(244, 244, 244);
+    --light-gray: rgb(144, 144, 144);
+    --medium-gray: rgb(96, 96, 96);
+    --dark-gray: rgb(13, 13, 13);
+    --animation-duration: 200ms;
+    --animation-timing-curve: ease-in-out;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    
+    position: sticky;
+    top: 0;
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 1.5), 0 17px 50px 0 rgba(0, 0, 0, .25);
+    padding: 0 .5rem;
+    margin-bottom: 1px solid var(--lightest-gray);
+    height: var(--header-height);
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+.sidebar {
+    top: var(--header-height);
+    position: sticky;
+    flex-shrink: 0;
+    background-color: rgb(48, 48, 49);
+    overflow: hidden;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+    align-items: center;
+    justify-content: stretch;
+    transition: width var(--animation-duration) var(--animation-timing-curve);
+    position: -webkit-sticky;
+    box-shadow: 5px 0 5px -2px rgba(0, 0, 0, .5);
+}
+
+
+
+
+.top-sidebar
+{
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-grow: 1;
+}
+.top-sidebar,
+.bot-sidebar {
+   
+    position: sticky;
+    width: 100%;
+}
+
+.sidebar.open .sidebar-link
+{
+    justify-content: flex-start;
+  
+}
+
+
+
+
+.container {
+    display: flex;
+    background-color: rgb(30, 30, 30);
+    
+}
+
+.content {
+    color: white;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    
+}
+
+
+
+
+.sidebar .hidden-sidebar {
+    opacity: 0;
+    width: 0;
+    transition: opacity var(--animation-duration) var(--animation-timing-curve);
+}
+.sidebar.open .hidden-sidebar
+{
+    opacity: 1;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.sidebar-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+  }
+  
+.project_icon {
+    transition: .5s;
+    width: 30px;
+    height: 30px;
+    margin-right: .5rem;
+    flex-shrink: 0;
+  }
+
+.sidebar.open .sidebar-list .hidden-sidebar
+{
+    margin-left: .2rem;
+    white-space: nowrap;
+}
+.sidebar-link
+{
+    display: flex;
+    padding-top: .25rem;
+    width: 100%;
+    padding: 1rem 0;
+    color: var(--light-gray);
+    text-decoration: none;
+    align-items: center;
+    padding-left: 1.25rem;
+}
+
+
+
+.sidebar-list-item  
+{
+    transition: .5s;
+    width: 100%;
+    fill: black;
+    position: relative;
+}
+
+
+
+
+.sidebar-list-item.active svg
+{
+    fill: #40826d;
+}
+
+.sidebar-list-item.active
+{
+    background-color: rgb(48, 48, 49);
+    
+}
+
+
+
+.sidebar-list-item:hover{
+    
+    transition: 0.2s;
+    background-color: rgb(55, 55, 59);
+    fill: #40826d;
+}
+
+.sidebar-list-item:hover .hidden-sidebar{
+    
+    transition: 0.5s;
+    background-color: rgb(55, 55, 59);
+    color: #40826d;
+}
+
+.sidebar-list-item:hover .project_icon
+{
+    transition: .5s;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.sidebar-list-item.active::before
+{
+    content: "";
+    background-color: #40826d;
+    height: 100%;
+    left: 0;
+    width: 3px;
+    position: absolute;
+}
+
+
+
+
+.sidebar.open  {
+   
+    width: 200px;
+    
+  
+}
+
+
+.mail_link
+{
+    transition: 1s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--light-gray);
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mail_link:hover
+{
+    transition: 1s;
+    color: #40826d;
+    font-size: 18px;
+}
+
+::-webkit-scrollbar
+{
+    background-color: rgb(30, 30,30);
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent, rgb(10, 10, 10));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: linear-gradient(transparent, #40826d);
+}
+
