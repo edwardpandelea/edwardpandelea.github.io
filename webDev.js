@@ -1,4 +1,10 @@
 
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 const menuIconBtn = document.querySelector('[data-btn-menu]');
 const sidebar = document.querySelector('[data-sidebar]');
 const javaPage = document.getElementById('javaPage');
