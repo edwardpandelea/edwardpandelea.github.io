@@ -33,5 +33,5 @@ mysql.title = "MySQL Projects";
 settings.title = "Settings";
 contact.title = "Contact";
 
-   
+
 
